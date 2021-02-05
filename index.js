@@ -10,9 +10,9 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (!msg.author.id === '218795930294419456') return;
+    if (!msg.author.id === '365935903581143042') return;
 
-    if(msg.author.id === '218795930294419456') {
+    if(msg.author.id === '365935903581143042') {
         msg.channel.send(uwu(msg.content));
     }
 });
