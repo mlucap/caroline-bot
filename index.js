@@ -10,14 +10,16 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (!msg.author.id === '365935903581143042') return;
+    const word = '*';
+    const userID = process.env.ID;
 
-    if(msg.author.id === '365935903581143042') {
-        if(msg.content.includes('*')) {
+    if(msg.author.id === userID) {
+        if(msg.content.includes(word)) {
             msg.delete();
-            msg.channel.send(uwu(msg.content).split('*'));
+            msg.channel.send(uwu(msg.content).split(word)); 
         }
     }
+    else return;
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN);  
